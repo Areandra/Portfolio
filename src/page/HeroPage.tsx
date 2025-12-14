@@ -1,4 +1,6 @@
 import profile from "@/assets/profile.png";
+import Button from "@/components/Button";
+import Particles from "@/components/Particles";
 import TextType from "@/components/TextType";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 
@@ -34,13 +36,11 @@ export default function HeroPage() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all flex items-center gap-2 group">
+            <Button>
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 transition-all flex items-center gap-2">
-              Contact Me
-            </button>
+            </Button>
+            <Button variant="outline">Contact Me</Button>
           </div>
 
           <div className="mt-12 pt-8 flex gap-6 text-gray-500">
@@ -59,6 +59,18 @@ export default function HeroPage() {
             alt=""
           />
         </div>
+      </div>
+      <div className="right-0 top-0 absolute w-full h-full pointer-events-none">
+        <Particles
+          particleColors={["#F59E0B", "#D97706"]}
+          particleCount={75}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={true}
+          disableRotation={false}
+        />
       </div>
     </>
   );
