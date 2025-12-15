@@ -18,7 +18,7 @@ function App() {
     },
     {
       name: "about",
-      placeholder: "About Me",
+      placeholder: "About",
       content: <AboutMePage />,
     },
     {
