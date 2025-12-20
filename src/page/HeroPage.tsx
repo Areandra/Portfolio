@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Particles from "@/components/Particles";
 import TextType from "@/components/TextType";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { Link } from "react-scroll";
 
 export default function HeroPage() {
   return (
@@ -36,11 +37,15 @@ export default function HeroPage() {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start w-full">
-            <Button>
-              View Projects
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline">Contact Me</Button>
+            <Link to={"project"} smooth spy duration={500}>
+              <Button>
+                View Projects
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to={"contact"} smooth spy duration={500}>
+              <Button variant="outline">Contact Me</Button>
+            </Link>
           </div>
 
           <div className="mt-8 lg:mt-12 lg:pt-8 flex gap-6 text-gray-500 justify-center lg:justify-start w-full">

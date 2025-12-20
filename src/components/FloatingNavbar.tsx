@@ -25,10 +25,10 @@ export default function FloatingNavbar({ navItems }: { navItems: NavItem[] }) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed w-screen md:left-1/2 md:-translate-x-1/2 md:top-6 m-auto z-50"
+      className="fixed w-screen md:w-fit md:left-1/2 md:-translate-x-1/2 md:top-6 m-auto z-50"
     >
       {/* Desktop */}
-      <div className="hidden md:flex items-center gap-10 rounded-full bg-black/40 backdrop-blur px-10 py-4">
+      <div className="hidden md:flex items-center gap-10 rounded-full backdrop-blur px-10 py-4">
         {navItems.map((item) => (
           <Link
             key={item.name}

@@ -6,6 +6,12 @@
   scrollbar-width: none;
 }
 
+.markdown-body img {
+  display: inline-block !important;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
